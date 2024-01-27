@@ -1,13 +1,16 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Container, Typography } from "@mui/material";
+import GoogleMap from "../components/GoogleMap";
 
-const About = () => {
+const Contact = () => {
   return (
-    <div>
-      <Navbar url="About" />
+    <>
+      <Navbar url="Contact" />
       <Container sx={{ mt: 10 }}>
-        <Typography variant="h3">About Us</Typography>
+        <Typography variant="h3">Contact Us</Typography>
+
+        <GoogleMap />
         <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
           sunt asperiores sed recusandae nihil dicta eligendi perferendis
@@ -68,8 +71,8 @@ const About = () => {
         </Typography>
       </Container>
       <Footer />
-    </div>
+    </>
   );
 };
 
-export default About;
+export default Contact;

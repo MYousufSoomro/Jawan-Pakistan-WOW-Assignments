@@ -8,6 +8,7 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -18,7 +19,7 @@ import logoBlack from "../assets/images/freelancery-logo-black.png";
 import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Signin", "Signup"];
+const navItems = ["Home", "Services", "About", "Contact", "Blogs"];
 
 function DrawerAppBar(props) {
   const { window, url } = props;
@@ -54,7 +55,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" color="error">
+      <AppBar component="nav" sx={{ backgroundColor: "#000" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -65,8 +66,8 @@ function DrawerAppBar(props) {
           >
             <GiHamburgerMenu />
           </IconButton>
+
           <Typography
-            variant="h6"
             component="div"
             sx={{
               flexGrow: 1,
@@ -88,6 +89,14 @@ function DrawerAppBar(props) {
               ) : null
             )}
           </Box>
+          <Button
+            sx={{ display: { xs: "none", sm: "none", md: "block" } }}
+            variant="contained"
+            href="tel:+923002001270"
+            size="large"
+          >
+            <BsFillTelephoneFill /> &nbsp; +92 300 2001270
+          </Button>
         </Toolbar>
       </AppBar>
       <nav>
